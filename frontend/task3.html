@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cảnh Lai Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-warning fw-bold" href="#">Cảnh Lai Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Danh mục</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đồ Công Nghệ</a></li>
+                            <li><a class="dropdown-item" href="#">Đồ Thể Thao</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+                <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cartModal">Giỏ hàng <span class="badge bg-danger" id="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="d-flex flex-wrap justify-content-center gap-2 p-2">
+            <button class="btn btn-outline-success">Hàng Chọn Lọc</button>
+            <button class="btn btn-outline-warning">Mã Giảm Giá</button>
+            <button class="btn btn-outline-danger">Freeship Extra</button>
+            <button class="btn btn-outline-info">Flash Sale</button>
+            <button class="btn btn-outline-primary">Hàng Nhập Khẩu</button>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row row-gap-3">
+            
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card position-relative">
+                    <span class="badge bg-danger position-absolute m-2">-15%</span>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.uwgHbqbY42ZvC3HBKweczQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Bàn phím">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bàn phím cơ</h5>
+                        <p class="text-muted text-decoration-line-through mb-0">1.200.000 VNĐ</p>
+                        <p class="text-danger fw-bold">1.020.000 VNĐ</p>
+                        <p class="fw-bold text-success"> Stock:<span id="stock-1">0</span></p>
+                        <button class="btn btn-primary w-100 btn-buy" data-id="1" data-name="Bàn phím cơ" data-price="1020000">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card position-relative">
+                    <span class="badge bg-danger position-absolute m-2">-10%</span>
+                    <img src="https://th.bing.com/th/id/OIP.UPxLiyt3VVkSOuI0CuxTEAHaJ4?w=217&h=201&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top" alt="Vợt cầu lông">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Vợt cầu lông</h5>
+                        <p class="text-muted text-decoration-line-through mb-0">850.000 VNĐ</p>
+                        <p class="text-danger fw-bold">765.000 VNĐ</p>
+                        <p class="fw-bold text-success"> Stock:<span id="stock-2">0</span></p>
+                        <button class="btn btn-primary w-100 btn-buy" data-id="2" data-name="Vợt cầu lông" data-price="765000">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card position-relative">
+                    <img src="https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/547182087_1254940586671943_1560653302095164555_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFBHVvWYmhDLqdyuv9clJWkK8gOJIWJ-ogryA4khYn6iGm42ftCToyWmiTnkJPWNf-9dNylWIrRqGkhJP4ISqNF&_nc_ohc=clJ3RFmOg6sQ7kNvwG4Ys4x&_nc_oc=AdoAfW45zW-8lBu9_Q8xqQW04zhJugf_p08nEHYBfaQUjlto4kkPdmC3ySNjxiMy26A&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=GdeZCvJ0zEDOlyuphgx_7g&_nc_ss=7b2a8&oh=00_Af69I2qqltoJxV4VNOMOIa767wbLN49tppRlO9C9q4Pmmg&oe=6A099A20" class="card-img-top" alt="Balo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Balo UIT K19</h5>
+                        <p class="text-muted mb-0">&nbsp;</p> <p class="text-danger fw-bold">450.000 VNĐ</p>
+                        <p class="fw-bold text-success"> Stock:<span id="stock-3">0</span></p>
+                        <button class="btn btn-primary w-100 btn-buy" data-id="3" data-name="Balo UIT K20" data-price="450000">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-3 mb-2">
+                <a href="#" class="text-white text-decoration-none">Chính sách bảo hành</a>
+                <a href="#" class="text-white text-decoration-none">Chính sách đổi trả</a>
+                <a href="#" class="text-white text-decoration-none">Chính sách bảo mật</a>
+            </div>
+            <p class="mb-1">ĐH Công nghệ Thông tin (UIT) - Khu phố 6, P. Linh Trung, TP. Thủ Đức</p>
+            <p class="mb-1">© 2025 Liêu Đường Cảnh Lai (24520925). All rights reserved.</p>
+        </div>
+<!--Thông báo Toast-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="myToast" class="toast text-bg-success border-0">
+        <div class="toast-body d-flex justify-content-between">
+            Sản phẩm đã được thêm vào giỏ hàng!
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+<!--Hộp thoại giỏ hàng-->
+<div class="modal fade" id="cartModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Giỏ hàng của bạn</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="cart-list" class="list-group mb-3"></ul>
+                <h5>Tổng: <span id="cart-total" class="text-danger">0</span> VND</h5>
+                <button id="btn-checkout" class="btn btn-success mt-2">Xác nhận đặt hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let cart = []; 
+    const toastObj = new bootstrap.Toast(document.getElementById('myToast'));
+    async function loadStocks() {
+
+    const response = await fetch('http://localhost:3000/products');
+
+    const products = await response.json();
+
+    products.forEach(product => {
+
+        document.getElementById(`stock-${product.id}`).innerText =
+            product.stock;
+
+    });
+
+}
+
+loadStocks();
+    //ý 1, ý 2
+    document.querySelectorAll('.btn-buy').forEach(btn => {
+        btn.addEventListener('click', function() {
+            let id = Number(this.dataset.id)
+            let name = this.dataset.name;
+            let price = Number(this.dataset.price);
+            
+            //xử lý logic tăng giảm số lượng
+            let item = cart.find(i => i.name === name);
+            if(item) item.qty++;
+            else cart.push({id: id, name: name, price: price, qty: 1});
+            
+            updateCart();
+            toastObj.show(); // Hiện Toast thông báo
+        });
+    });
+
+    //cập nhật giao diện
+    function updateCart() {
+        // cập nhật số lượng trên navbar
+        let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+        document.getElementById('cart-count').innerText = totalQty;
+        
+        //render danh sách trong modal
+        let listHTML = '';
+        let totalPrice = 0;
+        cart.forEach((item, index) => {
+            totalPrice += item.price * item.qty;
+            listHTML += `
+                <li class="list-group-item">
+                    <b>${item.name}</b> - ${item.price}VND x ${item.qty}
+                    <div class="mt-2">
+                        <button class="btn btn-sm btn-primary" onclick="changeQty(${index}, 1)">+1</button>
+                        <button class="btn btn-sm btn-warning" onclick="changeQty(${index}, -1)">-1</button>
+                        <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Xóa</button>
+                    </div>
+                </li>
+            `;
+        });
+        document.getElementById('cart-list').innerHTML = listHTML;
+        document.getElementById('cart-total').innerText = totalPrice;
+    }
+
+    //tăng giảm số lượng
+    function changeQty(index, amount) {
+        cart[index].qty += amount;
+        if(cart[index].qty === 0) cart.splice(index, 1); // Trừ về 0 thì xóa luôn
+        updateCart();
+    }
+
+    //xoá
+    function removeItem(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    //xác nhận đặt hàng
+document.getElementById('btn-checkout').addEventListener('click', async function () {
+
+    if (cart.length === 0) {
+        alert('Giỏ hàng đang trống!');
+        return;
+    }
+
+    try {
+
+        for (const item of cart) {
+
+            const response = await fetch('http://localhost:3000/checkout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    productId: item.id,
+                    quantity: item.qty
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.status !== 'processing') {
+                alert(`${item.name}: ${data.message}`);
+                return;
+            }
+
+        }
+
+        alert('Đặt hàng thành công toàn bộ giỏ hàng!');
+        await loadStocks();
+        cart = [];
+        updateCart();
+
+        bootstrap.Modal
+            .getInstance(document.getElementById('cartModal'))
+            .hide();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert('Không kết nối được backend!');
+
+    }
+
+});
+</script>
+</body>
+</html>

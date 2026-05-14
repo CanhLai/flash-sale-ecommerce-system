@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="g59DW_uR5Qkqsqd1AEuA">
+    <mxGraphModel dx="820" dy="1578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-16" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#343a40;fontColor=light-dark(#333333,#cccccc);" value="Người dùng / Trình duyệt" vertex="1">
+          <mxGeometry height="39" width="207" x="293" y="-1090" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-17" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=light-dark(#333333,#cccccc);" value="Frontend&#xa;• HTML, Bootstrap, JavaScript&#xa;• Giỏ hàng&#xa;• Realtime stock&#xa;• Checkout UI" vertex="1">
+          <mxGeometry height="174" width="260" x="267" y="-977" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-18" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=light-dark(#333333,#cccccc);" value="Backend API&#xa;• ExpressJS REST API&#xa;• /products&#xa;• /checkout" vertex="1">
+          <mxGeometry height="126" width="208" x="293" y="-729" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-19" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=light-dark(#333333,#cccccc);" value="Redis&#xa;• Quản lý tồn kho realtime&#xa;• Atomic DECRBY&#xa;• Chống oversell" vertex="1">
+          <mxGeometry height="158" width="209" x="170" y="-529" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-20" parent="1" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=light-dark(#333333,#cccccc);" value="BullMQ Queue&#xa;• Hàng đợi đơn hàng&#xa;• Xử lý bất đồng bộ" vertex="1">
+          <mxGeometry height="87" width="179" x="600" y="-580" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-21" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=light-dark(#333333,#cccccc);" value="Worker&#xa;• Xử lý job đơn hàng&#xa;• Lưu đơn hàng xuống database" vertex="1">
+          <mxGeometry height="126" width="260" x="559.5" y="-420" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-22" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=light-dark(#333333,#cccccc);" value="PostgreSQL&#xa;• Lưu products&#xa;• orders&#xa;• cart_items" vertex="1">
+          <mxGeometry height="148" width="123" x="628" y="-240" as="geometry" />
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-23" edge="1" parent="1" source="xYo1fIT9HIA_LYNKd0Rr-16" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xYo1fIT9HIA_LYNKd0Rr-17" value="Tương tác">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-24" edge="1" parent="1" source="xYo1fIT9HIA_LYNKd0Rr-17" style="curved=1;startArrow=block;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xYo1fIT9HIA_LYNKd0Rr-18" value="HTTP REST API">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-25" edge="1" parent="1" source="xYo1fIT9HIA_LYNKd0Rr-18" style="curved=1;startArrow=none;endArrow=block;exitX=0.13;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xYo1fIT9HIA_LYNKd0Rr-19" value="Check &amp; Trừ kho">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="-566" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-26" edge="1" parent="1" source="xYo1fIT9HIA_LYNKd0Rr-18" style="curved=1;startArrow=none;endArrow=block;exitX=0.87;exitY=1;entryX=0.5;entryY=0.01;rounded=0;" target="xYo1fIT9HIA_LYNKd0Rr-20" value="Đẩy job chốt đơn">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="-670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-27" edge="1" parent="1" source="xYo1fIT9HIA_LYNKd0Rr-20" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=0.5;entryY=0;rounded=0;" target="xYo1fIT9HIA_LYNKd0Rr-21" value="Lấy job">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xYo1fIT9HIA_LYNKd0Rr-28" edge="1" parent="1" source="xYo1fIT9HIA_LYNKd0Rr-21" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xYo1fIT9HIA_LYNKd0Rr-22" value="Lưu vĩnh viễn">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
